@@ -71,7 +71,7 @@ sudo apt install -y \
     yubikey-manager
 ```
 
-Установка из GitHub:
+Установка из GitHub (рекомендуется):
 
 ```bash
 git clone https://github.com/drknvpn/privacy-toolkit-x.git
@@ -82,6 +82,20 @@ pip3 install -r requirements.txt
 
 # Запуск
 sudo python3 privacy_toolkit.py
+```
+
+📑 Если нужны комманды для установки зависимостей отдельно:
+
+Все зависимости:
+```bash
+# Установка всех зависимостей
+pip install -r requirements.txt
+```
+
+Только основные зависимости:
+```bash
+# Только основные (без опциональных)
+pip install $(grep -v "^#" requirements.txt | grep -v "optional")
 ```
 
 📚 Документация:
