@@ -84,14 +84,6 @@ pip3 install -r requirements.txt
 sudo python3 privacy_toolkit.py
 ```
 
-🔗 Ссылки для удобства разметки readme.md
-
-## [Документация в удобном «HTML» виде][docs]
-## [Баг-репорты][bugs]
-## [Обсуждения на ГитХаб][issuesgithub]
-## [Обсуждения в телеграмм][issuestelegramm]
-
-
 📚 Документация:
 
 [docs]: https://htmlpreview.github.io/?https://github.com/drknvpn/privacy-toolkit-x/blob/main/docs/manual.html
@@ -109,6 +101,10 @@ sudo python3 privacy_toolkit.py
 
 👥 Сообщество:
 
+[Документация в удобном «HTML» виде][docs]
+[Баг-репорты][bugs]
+[Обсуждения на ГитХаб][issuesgithub]
+[Обсуждения в телеграмм][issuestelegramm]
 [bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
 [issuesgithub]: https://github.com/drknvpn/privacy-toolkit-x/issues
 [issuestelegramm]: https://t.me/darkniiit
