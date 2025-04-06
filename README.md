@@ -33,3 +33,46 @@
 | USB-Killer	   | ⚡⚡⚡     | Физическая нейтрализаця USB-устройств|
 | Dead Man Switch     | ⚡⚡⚡⚡       | Самоуничтожение данных при угрозе      |
 | WiFi Deauth     | ⚡⚡       | Атака на роутеры (для тестирования)      |
+
+
+💣 Хаос-режим (⚠️ Только для тестов!)
+
+```python
+from chaos import NuclearOption
+
+NuclearOption().activate(
+    wifi_jamming=True,
+    fake_bios=True,
+    encrypt_attacker=True 
+)
+```
+
+🛠 Установка:
+Требования:
+ОС: Linux (Kali/Ubuntu/Debian)
+Python: 3.8+
+
+```bash
+# Установка зависимостей
+sudo apt update
+sudo apt install -y \
+    python3-pip \
+    tor \
+    network-manager \
+    net-tools \
+    udisks2 \
+    yubikey-manager
+```
+
+Установка из GitHub:
+
+```bash
+git clone https://github.com/your_username/privacy-toolkit-x.git
+cd privacy-toolkit-x
+
+# Установка Python-зависимостей
+pip3 install -r requirements.txt
+
+# Запуск
+sudo python3 privacy_toolkit.py
+```
