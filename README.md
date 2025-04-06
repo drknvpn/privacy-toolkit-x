@@ -105,8 +105,8 @@ sudo python3 privacy_toolkit.py
 [Обсуждения на ГитХаб][issuesgithub]
 [Обсуждения в телеграмм][issuestelegramm]
 
-[❯ bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
+[bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
 
-[❯ issuesgithub]: https://github.com/drknvpn/privacy-toolkit-x/issues
+[issuesgithub]: https://github.com/drknvpn/privacy-toolkit-x/issues
 
-[❯ issuestelegramm]: https://t.me/darkniiit
+[issuestelegramm]: https://t.me/darkniiit
