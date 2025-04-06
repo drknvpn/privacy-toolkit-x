@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Toolkit X³ | Ultimate Security Suite</title>
+    <style>
+        :root {
+            --main-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --primary: #00ff88;
+            --secondary: #0099ff;
+            --text: #e0e0e0;
+            --danger: #ff5555;
+            --warning: #ffaa00;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--main-bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-image: linear-gradient(to right, #0066ff, #00ffff);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--secondary);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        .card h2 {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        pre {
+            background-color: black;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            color: #00ff00;
+            border: 1px solid #333;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: var(--secondary);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .copy-btn:hover {
+            background-color: #0077cc;
+        }
+        .warning {
+            background-color: rgba(255, 85, 85, 0.2);
+            border-left: 4px solid var(--danger);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .note {
+            background-color: rgba(0, 153, 255, 0.2);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            background-color: #111111;
+            border-top: 1px solid #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            background-color: #222;
+            color: var(--primary);
+        }
+        tr:hover {
+            background-color: #252525;
+        }
+        .pill {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        .pill-primary {
+            background-color: var(--primary);
+            color: black;
+        }
+        .pill-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        .pill-warning {
+            background-color: var(--warning);
+            color: black;
+        }
+        .pill-danger {
+            background-color: var(--danger);
+            color: white;
+        }
+        .github-link {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--primary);
+        }
+        .github-link:hover {
+            color: var(--secondary);
+            border-bottom-color: var(--secondary);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background-color: #252525;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid var(--primary);
+        }
+        .command {
+            font-family: 'Courier New', monospace;
+            color: var(--primary);
+            background-color: #111;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Privacy Toolkit X³</h1>
+            <p>Ultimate Security Suite for Digital Privacy & Ethical Hacking</p>
+        </div>
+    </header>
+    <center><img src="https://raw.githubusercontent.com/drknvpn/privacy-toolkit-x/refs/heads/main/don't%20open/disclaimer.gif" alt="disclaimer"></center><br>
+    <div class="container">
+        <section id="intro">
+            <div class="card">
+                <h2>Introduction</h2>
+                <p>The Privacy Toolkit X³ is a comprehensive collection of security tools designed for ethical hackers, penetration testers, and privacy-conscious individuals. This suite provides advanced functionalities ranging from simple privacy tools to ultra-paranoid security measures.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>🛡️ Core Protection</h3>
+                        <ul>
+                            <li>Military-grade encryption</li>
+                            <li>Real-time threat monitoring</li>
+                            <li>Automatic vulnerability patching</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>👁️ Anti-Surveillance</h3>
+                        <ul>
+                            <li>Metadata obliteration</li>
+                            <li>Digital footprint masking</li>
+                            <li>Behavioral camouflage</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>⚡ Paranoid Mode</h3>
+                        <ul>
+                            <li>Dead Man's Switch</li>
+                            <li>USB Device Terminator</li>
+                            <li>Emergency data nuke</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <strong>⚠ Extreme Warning:</strong> This toolkit contains features that can cause irreversible damage to systems and data. Use only in authorized environments.
+                </div>
+            </div>
+        </section>
+
+        <section id="installation">
+            <div class="card">
+                <h2>Installation & Setup</h2>
+                
+                <h3>System Requirements</h3>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum</th>
+                        <th>Recommended</th>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td>x86_64 2 cores</td>
+                        <td>x86_64 4+ cores with AES-NI</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4GB</td>
+                        <td>16GB+</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>40GB HDD</td>
+                        <td>256GB NVMe SSD</td>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td>Linux 5.4+</td>
+                        <td>Qubes OS or Tails</td>
+                    </tr>
+                </table>
+
+                <h3>Complete Installation</h3>
+                <pre>
+# Install dependencies
+sudo apt update && sudo apt install -y \
+    git python3-pip tor network-manager \
+    net-tools libusb-1.0-0-dev \
+    python3-dev build-essential libssl-dev \
+    libffi-dev libxslt-dev libxml2-dev \
+    zlib1g-dev libjpeg-dev libfuzzy-dev \
+    sqlite3 libsqlite3-dev
+
+# Clone repository
+git clone --depth 1 https://github.com/drknvpn/privacy-toolkit-x.git
+cd privacy-toolkit-x
+
+# Install Python packages
+pip3 install -r requirements.txt --require-hashes
+
+# Initialize the system
+sudo ./install.sh --full --crypto-level=paranoid
+                </pre>
+
+                <div class="note">
+                    <strong>Note:</strong> For air-gapped systems, download the offline bundle from our releases page.
+                </div>
+            </div>
+        </section>
+
+        <section id="core-features">
+            <div class="card">
+                <h2>Core Security Features</h2>
+                
+                <h3>1. Network Protection Suite</h3>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Command</th>
+                        <th>Risk</th>
+                    </tr>
+                    <tr>
+                        <td>VPN Chain</td>
+                        <td><code>vpn --chain 3 --protocol wireguard</code></td>
+                        <td><span class="pill pill-primary">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td>Tor Obfuscation</td>
+                        <td><code>tor --bridge obfs4 --stealth</code></td>
+                        <td><span class="pill pill-primary">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td>DNS Armor</td>
+                        <td><code>dns --over-https --filter-malware</code></td>
+                        <td><span class="pill pill-primary">Low</span></td>
+                    </tr>
+                </table>
+
+                <h3>2. Data Protection</h3>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Command</th>
+                        <th>Risk</th>
+                    </tr>
+                    <tr>
+                        <td>File Encryption</td>
+                        <td><code>encrypt --algo aes-512 --keyfile ~/keys/main</code></td>
+                        <td><span class="pill pill-primary">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td>Metadata Cleaner</td>
+                        <td><code>clean --recursive --shred /home/user/docs</code></td>
+                        <td><span class="pill pill-secondary">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Secure Delete</td>
+                        <td><code>wipe --method dod7 --passes 35 /dev/sdb1</code></td>
+                        <td><span class="pill pill-warning">High</span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="advanced-features">
+            <div class="card">
+                <h2>Advanced Security Modules</h2>
+                
+                <h3>1. Paranoid Mode</h3>
+                <pre>
+from toolkit import ParanoidMode
+
+paranoid = ParanoidMode(
+    usb_kill=True,          # Destroy suspicious USB devices
+    thermal_protection=True,# Mask heat signature (requires hardware)
+    rf_shielding=False,     # Enable Faraday cage emulation
+    dead_mans_switch={
+        'trigger': 'no_activity_1h',
+        'action': 'encrypt_and_self_destruct',
+        'targets': ['/home', '/etc', '/var/log']
+    }
+)
+paranoid.activate()
+                </pre>
+
+                <h3>2. Digital Camouflage System</h3>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Description</th>
+                        <th>Command</th>
+                    </tr>
+                    <tr>
+                        <td>Persona Generator</td>
+                        <td>Creates complete digital aliases</td>
+                        <td><code>alias --create --type journalist --years 5</code></td>
+                    </tr>
+                    <tr>
+                        <td>Behavior Simulator</td>
+                        <td>Mimics human activity patterns</td>
+                        <td><code>simulate --behavior corporate --intensity 0.8</code></td>
+                    </tr>
+                    <tr>
+                        <td>Noise Generator</td>
+                        <td>Creates fake network traffic</td>
+                        <td><code>noise --protocol https --volume high</code></td>
+                    </tr>
+                </table>
+
+                <div class="warning">
+                    <strong>⚠ Critical:</strong> Paranoid Mode features can cause data loss and hardware damage. Use with extreme caution.
+                </div>
+            </div>
+        </section>
+
+        <section id="emergency">
+            <div class="card">
+                <h2>Emergency Protocols</h2>
+                
+                <h3>1. Data Destruction Methods</h3>
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Command</th>
+                        <th>Effectiveness</th>
+                    </tr>
+                    <tr>
+                        <td>Quick Wipe</td>
+                        <td><code>nuke --fast /dev/sdX</code></td>
+                        <td>Basic (1 pass)</td>
+                    </tr>
+                    <tr>
+                        <td>DoD Standard</td>
+                        <td><code>nuke --dod /dev/sdX</code></td>
+                        <td>High (7 passes)</td>
+                    </tr>
+                    <tr>
+                        <td>Physical Destruction</td>
+                        <td><code>nuke --physical --voltage 5.2</code></td>
+                        <td>Extreme (Hardware damage)</td>
+                    </tr>
+                </table>
+
+                <h3>2. Counter-Surveillance</h3>
+                <pre>
+from toolkit import CounterSurveillance
+
+cs = CounterSurveillance(
+    detect_tailgating=True,  # Physical surveillance detection
+    rf_scan=True,            # Wireless bug detection
+    thermal_scan=False,      # Requires FLIR camera
+    emf_protection=True      # Faraday cage activation
+)
+
+cs.run_full_sweep()
+                </pre>
+            </div>
+        </section>
+
+        <section id="command-reference">
+            <div class="card">
+                <h2>Complete Command Reference</h2>
+                
+                <h3>Core Commands</h3>
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Risk</th>
+                    </tr>
+                    <tr>
+                        <td><code>privacy --enable</code></td>
+                        <td>Basic privacy protection</td>
+                        <td><span class="pill pill-primary">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>network --secure</code></td>
+                        <td>Full network lockdown</td>
+                        <td><span class="pill pill-secondary">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>crypto --rotate-keys</code></td>
+                        <td>Change all encryption keys</td>
+                        <td><span class="pill pill-secondary">Medium</span></td>
+                    </tr>
+                </table>
+
+                <h3>Advanced Commands</h3>
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Risk</th>
+                    </tr>
+                    <tr>
+                        <td><code>paranoid --activate</code></td>
+                        <td>Enable extreme security measures</td>
+                        <td><span class="pill pill-warning">High</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>usb --terminate-all</code></td>
+                        <td>Destroy all connected USB devices</td>
+                        <td><span class="pill pill-danger">Extreme</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>system --self-destruct</code></td>
+                        <td>Complete system wipe and shutdown</td>
+                        <td><span class="pill pill-danger">Extreme</span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="ethical-guidelines">
+            <div class="card">
+                <h2>Ethical Usage Guidelines</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card" style="border-left-color: var(--danger);">
+                        <h3>❌ Strictly Prohibited</h3>
+                        <ul>
+                            <li>Attacking systems without authorization</li>
+                            <li>Bypassing lawful surveillance</li>
+                            <li>Creating persistent backdoors</li>
+                            <li>Digital harassment</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" style="border-left-color: var(--primary);">
+                        <h3>✅ Approved Uses</h3>
+                        <ul>
+                            <li>Security research</li>
+                            <li>Personal privacy protection</li>
+                            <li>Authorized penetration testing</li>
+                            <li>Human rights work</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <strong>Legal Notice:</strong> Violation of ethical guidelines may result in criminal prosecution. All activities are logged.
+                </div>
+            </div>
+        </section>
+
+        <section id="resources">
+            <div class="card">
+                <h2>Additional Resources</h2>
+                
+                <h3>Documentation</h3>
+                <ul>
+                    <li><a href="#" class="github-link">Technical White Paper</a></li>
+                    <li><a href="#" class="github-link">API Reference (Coming soon)</a></li>
+                    <li><a href="#" class="github-link">Security Audit Reports (Coming soon)</a></li>
+                </ul>
+
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="https://github.com/drknvpn/privacy-toolkit-x" class="github-link">GitHub Repository</a></li>
+                    <li><a href="#" class="github-link">Encrypted Forum (Coming soon)</a></li>
+                    <li><a href="#" class="github-link">Security Mailing List (Coming soon)</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Privacy Toolkit X³ | Ultimate Security Suite</p>
+            <p>For authorized security testing and privacy enhancement only</p>
+            <p>Version 7.2 | Last Updated: February 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const textToCopy = codeElement.textContent;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const btn = event.target;
+                btn.textContent = "Copied!";
+                setTimeout(() => {
+                    btn.textContent = "Copy";
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
