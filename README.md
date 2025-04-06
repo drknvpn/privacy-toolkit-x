@@ -1,6 +1,6 @@
 # Privacy Toolkit X³ 🔒
 
-![Banner](https://i.imgur.com/edge/bVQmKXJ.png)  
+![Banner]([https://i.imgur.com/edge/bVQmKXJ.png](https://imgur.com/JxWpFP4))  
 *"Когда стандартные средства защиты — это слишком скучно"*
 
 ## 🛡️ Что это?
