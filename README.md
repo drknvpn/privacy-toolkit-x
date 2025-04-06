@@ -84,7 +84,8 @@ pip3 install -r requirements.txt
 sudo python3 privacy_toolkit.py
 ```
 
-📚 Документация
+📚 Документация:
+
 [Документация в удобном «HTML» виде][links]
 
 [links]: https://htmlpreview.github.io/?https://github.com/drknvpn/privacy-toolkit-x/blob/main/docs/manual.html
