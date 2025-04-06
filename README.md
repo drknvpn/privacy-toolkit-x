@@ -102,12 +102,12 @@ sudo python3 privacy_toolkit.py
 👥 Сообщество:
 
 [Документация в удобном «HTML» виде][docs]
-[❯ Баг-репорты][bugs]
-[❯ Обсуждения на ГитХаб][issuesgithub]
-[❯ Обсуждения в телеграмм][issuestelegramm]
+[Баг-репорты][❯ bugs]
+[Обсуждения на ГитХаб][❯ issuesgithub]
+[Обсуждения в телеграмм][❯ issuestelegramm]
 
-[bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
+[❯ bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
 
-[issuesgithub]: https://github.com/drknvpn/privacy-toolkit-x/issues
+[❯ issuesgithub]: https://github.com/drknvpn/privacy-toolkit-x/issues
 
-[issuestelegramm]: https://t.me/darkniiit
+[❯ issuestelegramm]: https://t.me/darkniiit
