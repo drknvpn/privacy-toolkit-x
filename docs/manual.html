@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Toolkit X³ | Ethical Hacking Suite</title>
+    <style>
+        :root {
+            --main-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --primary: #00ff88;
+            --secondary: #0099ff;
+            --text: #e0e0e0;
+            --danger: #ff5555;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--main-bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-image: linear-gradient(to right, #0066ff, #00ffff);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--secondary);
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        .card h2 {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        pre {
+            background-color: black;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            color: #00ff00;
+            border: 1px solid #333;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: var(--secondary);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .copy-btn:hover {
+            background-color: #0077cc;
+        }
+        .warning {
+            background-color: rgba(255, 85, 85, 0.2);
+            border-left: 4px solid var(--danger);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            background-color: #111111;
+            border-top: 1px solid #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            background-color: #222;
+            color: var(--primary);
+        }
+        tr:hover {
+            background-color: #252525;
+        }
+        .pill {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        .pill-primary {
+            background-color: var(--primary);
+            color: black;
+        }
+        .pill-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        .github-link {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--primary);
+        }
+        .github-link:hover {
+            color: var(--secondary);
+            border-bottom-color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Privacy Toolkit X³</h1>
+            <p>Ultimate Ethical Hacking Suite for Digital Privacy</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="intro">
+            <div class="card">
+                <h2>Introduction</h2>
+                <p>The Privacy Toolkit X³ is a comprehensive collection of security tools designed for ethical hackers, penetration testers, and privacy-conscious individuals. This suite provides advanced functionalities ranging from simple privacy tools to ultra-paranoid security measures.</p>
+                <p><strong>Disclaimer:</strong> These tools should only be used for authorized security testing, educational purposes, and legitimate privacy protection. Misuse of these tools can violate laws and ethical standards.</p>
+                
+                <div class="warning">
+                    <strong>⚠ Warning:</strong> Use this toolkit responsibly. Some features are EXTREMELY destructive when misused.
+                </div>
+            </div>
+        </section>
+
+        <section id="dependencies">
+            <div class="card">
+                <h2>Dependencies Installation</h2>
+                <p>Before using the Toolkit, install these required dependencies:</p>
+                
+                <h3>Core Requirements</h3>
+                <pre>
+sudo apt update
+sudo apt install -y python3 python3-pip git build-essential
+sudo apt install -y tor obfs4proxy network-manager net-tools
+                </pre>
+
+                <h3>Python Packages</h3>
+                <pre>
+pip3 install psutil pyudev pyautogui scapy cryptography
+pip3 install pycryptodome pyyaml pyexiv2 pillow python-dotenv
+pip3 install pyperclip transformers torch sounddevice
+                </pre>
+
+                <h3>Optional Components</h3>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Installation</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>YubiKey Tools</td>
+                        <td><pre class="pill pill-primary">sudo apt install yubikey-manager</pre></td>
+                        <td>Hardware security authentication</td>
+                    </tr>
+                    <tr>
+                        <td>Mumble VoIP</td>
+                        <td><pre class="pill pill-primary">sudo apt install mumble</pre></td>
+                        <td>Secure voice communications</td>
+                    </tr>
+                    <tr>
+                        <td>MAT2</td>
+                        <td><pre class="pill pill-primary">sudo apt install mat2</pre></td>
+                        <td>Metadata removal from files</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="modules">
+            <div class="card">
+                <h2>Core Modules & Commands</h2>
+                
+                <h3>1. Privacy Protection</h3>
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Risk Level</th>
+                    </tr>
+                    <tr>
+                        <td><code>enable_encrypted_dns()</code></td>
+                        <td>Switches to Cloudflare/Quad9 with DoH encryption</td>
+                        <td><span class="pill pill-primary">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>clean_metadata(filepath)</code></td>
+                        <td>Removes EXIF/metadata from files</td>
+                        <td><span class="pill pill-primary">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>generate_temp_email()</code></td>
+                        <td>Creates disposable email via TempMail API</td>
+                        <td><span class="pill pill-primary">Low</span></td>
+                    </tr>
+                </table>
+
+                <h3>2. Network Security</h3>
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Risk Level</th>
+                    </tr>
+                    <tr>
+                        <td><code>enable_killswitch()</code></td>
+                        <td>Blocks all internet if VPN disconnects</td>
+                        <td><span class="pill pill-secondary">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>dead_mans_switch()</code></td>
+                        <td>Destroys sensitive data when unauthorized access detected</td>
+                        <td><span class="pill pill-secondary">High</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>deauth_all()</code></td>
+                        <td>Kicks all devices from WiFi network</td>
+                        <td><span class="pill pill-secondary">High</span></td>
+                    </tr>
+                </table>
+
+                <h3>3. Advanced Features</h3>
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Risk Level</th>
+                    </tr>
+                    <tr>
+                        <td><code>PhantomMode().cleanse()</code></td>
+                        <td>Self-destruct script and all traces</td>
+                        <td><span class="pill pill-secondary">Extreme</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>USBTerminator().watch()</code></td>
+                        <td>Electronically destroys suspicious USB devices</td>
+                        <td><span class="pill pill-secondary">Extreme</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>ChaosMode()</code></td>
+                        <td>Activates all chaotic functions + self-destruct</td>
+                        <td><span class="pill pill-secondary">Nuclear</span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="full-code">
+            <div class="card">
+                <h2>Complete Source Code</h2>
+                <p>The complete Privacy Toolkit X³ Python script is available on our GitHub repository:</p>
+                
+                <pre>
+<a href="https://github.com/secure-dev/privacy-toolkit-x" class="github-link">https://github.com/secure-dev/privacy-toolkit-x</a>
+                </pre>
+
+                <p>To clone and install:</p>
+                <pre>
+git clone https://github.com/secure-dev/privacy-toolkit-x.git
+cd privacy-toolkit-x
+sudo python3 setup.py install
+                </pre>
+            </div>
+        </section>
+
+        <section id="gui-description">
+            <div class="card">
+                <h2>GUI Interface Overview</h2>
+                
+                <h3>Main Features</h3>
+                <ul>
+                    <li><strong>Security Dashboard</strong> - Quick access to core privacy tools</li>
+                    <li><strong>Emergency Protocols</strong> - Dead man's switch, log shredder</li>
+                    <li><strong>Network Tools</strong> - VPN killswitch, MAC address changer</li>
+                    <li><strong>Advanced Settings</strong> - USB device control, chaos mode</li>
+                </ul>
+
+                <div class="warning">
+                    Screenshots were removed to maintain operational security. GUI layout follows standard ethical hacking tool conventions.
+                </div>
+            </div>
+        </section>
+
+        <section id="github">
+            <div class="card">
+                <h2>GitHub Repository Structure</h2>
+                <p>Our GitHub repository contains the following files:</p>
+                
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td><code>privacy_toolkit.py</code></td>
+                        <td>Main Python script with all functionality</td>
+                    </tr>
+                    <tr>
+                        <td><code>setup.py</code></td>
+                        <td>Installation script with dependencies</td>
+                    </tr>
+                    <tr>
+                        <td><code>/docs</code></td>
+                        <td>Documentation (this HTML file included)</td>
+                    </tr>
+                    <tr>
+                        <td><code>/examples</code></td>
+                        <td>Sample configurations and use cases</td>
+                    </tr>
+                    <tr>
+                        <td><code>LICENSE</code></td>
+                        <td>GNU GPL v3.0 license file</td>
+                    </tr>
+                </table>
+
+                <h3>Installation via GitHub</h3>
+                <pre>
+# Clone repository
+git clone https://github.com/secure-dev/privacy-toolkit-x.git
+
+# Install dependencies
+cd privacy-toolkit-x
+pip install -r requirements.txt
+
+# Run in GUI mode
+python3 privacy_toolkit.py --gui
+                </pre>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Privacy Toolkit X³ | Ethical Hacking Suite</p>
+            <p>For authorized security testing and privacy enhancement only</p>
+            <p>Version 7.0 | Last Updated: June 2023</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const textToCopy = codeElement.textContent;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const btn = event.target;
+                btn.textContent = "Copied!";
+                setTimeout(() => {
+                    btn.textContent = "Copy";
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
