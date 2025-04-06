@@ -1,7 +1,7 @@
 # Privacy Toolkit X³ 🔒
 
 <div id="header" align="center">
-  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW94NDB2ZWhxbGdwYjFidGx1MmdxeTVlN3JyNnBtdzFyNm9mdGttMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Zesu5VPNGJlm/giphy.gif" width="100"/>
+  <img src="https://i.giphy.com/KiXiO1iR3fFhC.webp" width="100"/>
 </div>
 *"Когда стандартные средства защиты — это слишком скучно"*
 
