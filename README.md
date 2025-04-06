@@ -85,6 +85,7 @@ sudo python3 privacy_toolkit.py
 ```
 
 📚 Документация:
+[Документация в удобном «HTML» виде][docs]
 
 [docs]: https://htmlpreview.github.io/?https://github.com/drknvpn/privacy-toolkit-x/blob/main/docs/manual.html
 
@@ -100,11 +101,9 @@ sudo python3 privacy_toolkit.py
 
 
 👥 Сообщество:
-
-[Документация в удобном «HTML» виде][docs]
-[Баг-репорты][❯ bugs]
-[Обсуждения на ГитХаб][❯ issuesgithub]
-[Обсуждения в телеграмм][❯ issuestelegramm]
+[Баг-репорты][bugs]
+[Обсуждения на ГитХаб][issuesgithub]
+[Обсуждения в телеграмм][issuestelegramm]
 
 [❯ bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
 
