@@ -1,6 +1,8 @@
 # Privacy Toolkit X³ 🔒
 
-![Banner](https://i.imgur.com/JxWpFP4.mp4)  
+<div id="header" align="center">
+  <img src="https://i.imgur.com/JxWpFP4.mp4" width="100"/>
+</div>
 *"Когда стандартные средства защиты — это слишком скучно"*
 
 ## 🛡️ Что это?
