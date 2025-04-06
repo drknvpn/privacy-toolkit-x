@@ -54,6 +54,7 @@ NuclearOption().activate(
 | Операционная система | Питон |
 | --- | --- |
 | Linux (Kali/Ubuntu/Debian) | 3.8+ |
+
 | **Обязательные зависимости** |
 | --- |
 | python3.8+, tor, network-manager, libusb-1.0 |
