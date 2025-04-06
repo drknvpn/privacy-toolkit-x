@@ -86,6 +86,5 @@ sudo python3 privacy_toolkit.py
 
 📚 Документация
 [Документация в удобном «HTML» виде][links]
-| **Документация в виде HTML страницы** |
-| --- |
-| [links]: https://htmlpreview.github.io/?https://github.com/drknvpn/privacy-toolkit-x/blob/main/docs/manual.html |
+
+[links]: https://htmlpreview.github.io/?https://github.com/drknvpn/privacy-toolkit-x/blob/main/docs/manual.html
