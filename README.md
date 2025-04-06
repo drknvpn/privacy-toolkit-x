@@ -116,7 +116,7 @@ pip install $(grep -v "^#" requirements.txt | grep -v "optional")
 
 [Документация в удобном «HTML» виде][docs]
 
-[docs]: https://htmlpreview.github.io/?https://github.com/drknvpn/privacy-toolkit-x/blob/main/docs/manual.html
+[docs]: https://drknvpn.github.io/privacy-toolkit-x/
 
 
 🌍 Сообщество:
