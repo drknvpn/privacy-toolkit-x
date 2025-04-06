@@ -102,15 +102,13 @@ sudo python3 privacy_toolkit.py
 
 👥 Сообщество:
 [Баг-репорты][bugs]
+
 [Обсуждения на ГитХаб][issuesgithub]
+
 [Обсуждения в телеграмм][issuestelegramm]
 
 [bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
 
-❯
-
 [issuesgithub]: https://github.com/drknvpn/privacy-toolkit-x/issues
-
-❯
 
 [issuestelegramm]: https://t.me/darkniiit
