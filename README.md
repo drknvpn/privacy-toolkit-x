@@ -74,7 +74,7 @@ sudo apt install -y \
 Установка из GitHub:
 
 ```bash
-git clone https://github.com/your_username/privacy-toolkit-x.git
+git clone https://github.com/drknvpn/privacy-toolkit-x.git
 cd privacy-toolkit-x
 
 # Установка Python-зависимостей
@@ -84,3 +84,8 @@ pip3 install -r requirements.txt
 sudo python3 privacy_toolkit.py
 ```
 
+📚 Документация
+[Документация в удобном «HTML» виде][links]
+| **Документация в виде HTML страницы** |
+| --- |
+| [links]: https://htmlpreview.github.io/?https://github.com/drknvpn/privacy-toolkit-x/blob/main/docs/manual.html |
