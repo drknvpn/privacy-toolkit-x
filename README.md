@@ -51,8 +51,9 @@ NuclearOption().activate(
 
 Требования:
 
-ОС: Linux (Kali/Ubuntu/Debian)
-Python: 3.8+
+| Операционная система | Питон |
+| --- | --- |
+| Linux (Kali/Ubuntu/Debian) | 3.8+ |
 
 ```bash
 # Установка зависимостей
