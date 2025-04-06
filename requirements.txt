@@ -1,0 +1,36 @@
+# Основные зависимости
+psutil>=5.8.0
+pyudev>=0.22.0
+pyautogui>=0.9.53
+scapy>=2.4.5
+cryptography>=36.0.0
+pillow>=9.0.0
+pyexiv2>=0.7.2
+requests>=2.27.1
+pyyaml>=6.0
+python-dotenv>=0.19.0
+pyperclip>=1.8.2
+
+# Для USB Terminator
+pyusb>=1.2.1
+libusb1>=1.9.3
+
+# Для Dead Man"s Switch
+pynacl>=1.5.0
+secure-smtplib>=0.1.1
+
+# Для GUI (если будете добавлять)
+tk>=0.1.0
+customtkinter>=4.6.3
+
+# Для WiFi модулей
+netifaces>=0.11.0
+wifi>=0.3.8
+
+# Для шифрования файлов
+pycryptodome>=3.14.1
+argon2-cffi>=21.3.0
+
+# Опциональные (можно закомментировать)
+# yubikey-manager>=4.0.0 - требует ручной установки
+# mat2>=0.12.0 - через apt
