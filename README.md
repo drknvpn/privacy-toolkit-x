@@ -54,6 +54,9 @@ NuclearOption().activate(
 | Операционная система | Питон |
 | --- | --- |
 | Linux (Kali/Ubuntu/Debian) | 3.8+ |
+| **Обязательные зависимости** |
+| --- |
+| python3.8+, tor, network-manager, libusb-1.0 |
 
 ```bash
 # Установка зависимостей
@@ -79,3 +82,4 @@ pip3 install -r requirements.txt
 # Запуск
 sudo python3 privacy_toolkit.py
 ```
+
