@@ -1,6 +1,8 @@
 # Privacy Toolkit X³ 🔒
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/5Zesu5VPNGJlm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/5Zesu5VPNGJlm">via GIPHY</a></p>
+<div id="header" align="center">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW94NDB2ZWhxbGdwYjFidGx1MmdxeTVlN3JyNnBtdzFyNm9mdGttMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Zesu5VPNGJlm/giphy.gif" width="100"/>
+</div>
 *"Когда стандартные средства защиты — это слишком скучно"*
 
 ## 🛡️ Что это?
