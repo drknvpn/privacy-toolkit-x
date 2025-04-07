@@ -15,7 +15,7 @@
 
 
 <div id="header" align="center">
-  <img src="https://raw.githubusercontent.com/drknvpn/privacy-toolkit-x/refs/heads/main/don't%20open/Documentation.png" width="600"/>
+  <img src="https://raw.githubusercontent.com/drknvpn/privacy-toolkit-x/refs/heads/main/don't%20open/Documentation.png" width="400"/>
 </div>
 
 [Installation, dependencies, etc.][docs]
