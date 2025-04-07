@@ -46,11 +46,11 @@ GNU GPLv3 — Use, modify, distribute freely.
 
 - This tool is intended ONLY for:
 
-+1. Ethical hacking
++ Ethical hacking
 
-+ 2. Security testing
++ Security testing
 
-+ 3. Academic research
++ Academic research
 
 ! Any illegal use is FORBIDDEN!
 
