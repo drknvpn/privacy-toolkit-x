@@ -52,6 +52,6 @@ GNU GPLv3 — Use, modify, distribute freely.
 
 + Academic research
 
-! Any illegal use is FORBIDDEN!
+❗️Any illegal use is FORBIDDEN❗️
 
 The author is not responsible for misuse.
