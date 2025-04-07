@@ -25,14 +25,8 @@
 </a>
 </div>
 
-📜 License:
 
-GNU GPLv3 — Use, modify, distribute freely.
-
-
-
-
-**Security should be available, but remember:**
+<center>**Security should be available, but remember:**
 
 - This tool is intended ONLY for:
 
@@ -44,4 +38,4 @@ GNU GPLv3 — Use, modify, distribute freely.
 
 ❗️Any illegal use is FORBIDDEN❗️
 
-The author is not responsible for misuse.
+The author is not responsible for misuse.</center>
