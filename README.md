@@ -25,15 +25,8 @@
 
 [Bug reports][bugs]
 
-[Discussions on GitHub][issuesgithub]
-
-[Discussions in Telegram][issuestelegramm]
-
 [bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
 
-[issuesgithub]: https://github.com/drknvpn/privacy-toolkit-x/issues
-
-[issuestelegramm]: https://t.me/darkniiit
 
 📜 License:
 
