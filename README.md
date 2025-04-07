@@ -14,7 +14,9 @@
 **Privacy Toolkit X³** — Is an advanced toolkit for the paranoid level of data protection.
 
 
-📚 Documentation:
+<div id="header" align="center">
+  <img src="https://raw.githubusercontent.com/drknvpn/privacy-toolkit-x/refs/heads/main/don't%20open/Documentation.png" width="600"/>
+</div>
 
 [Installation, dependencies, etc.][docs]
 
