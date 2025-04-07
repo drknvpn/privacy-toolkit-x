@@ -5,29 +5,29 @@
 </div>
 
 
-## 🛡️ Что это?
+## 🛡️ What is it?
 
 <div id="header" align="center">
 <img src="https://i.imgur.com/pB6HoVa.png" width="350"/>
 </div>
 
-**Privacy Toolkit X³** — это продвинутый набор инструментов для параноидального уровня защиты данных.
+**Privacy Toolkit X³** — Is an advanced toolkit for the paranoid level of data protection.
 
 
-📚 Документация:
+📚 Documentation:
 
-[Установка, зависимости и т.д][docs]
+[Installation, dependencies, etc.][docs]
 
 [docs]: https://drknvpn.github.io/privacy-toolkit-x/
 
 
-🌍 Сообщество:
+🌍 Community:
 
-[Баг-репорты][bugs]
+[Bug reports][bugs]
 
-[Обсуждения на ГитХаб][issuesgithub]
+[Discussions on GitHub][issuesgithub]
 
-[Обсуждения в телеграмм][issuestelegramm]
+[Discussions in Telegram][issuestelegramm]
 
 [bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
 
@@ -35,19 +35,23 @@
 
 [issuestelegramm]: https://t.me/darkniiit
 
-📜 Лицензия:
+📜 License:
 
-GNU GPLv3 — Используйте, модифицируйте, распространяйте свободно.
-
-
+GNU GPLv3 — Use, modify, distribute freely.
 
 
-**Безопасность должна быть доступной, но помните:**
 
-- Этот инструмент предназначен ТОЛЬКО для:
-+ 1. Этичного хакинга
-+ 2. Тестирования безопасности
-+ 3. Академических исследований
 
-! Любое незаконное использование ЗАПРЕЩЕНО !
-Автор не несет ответственности за неправомерное использование.
+**Security should be available, but remember:**
+
+- This tool is intended ONLY for:
+
++1. Ethical hacking
+
++ 2. Security testing
+
++ 3. Academic research
+
+! Any illegal use is FORBIDDEN!
+
+The author is not responsible for misuse.
