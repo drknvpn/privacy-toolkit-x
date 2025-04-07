@@ -19,22 +19,11 @@
 </a>
 </div>
 
-[Installation, dependencies, etc.][docs]
-
-[docs]: https://drknvpn.github.io/privacy-toolkit-x/
-
-
 <div id="header" align="center">
 <a href="https://github.com/drknvpn/privacy-toolkit-x/issues">
   <img src="https://raw.githubusercontent.com/drknvpn/privacy-toolkit-x/refs/heads/main/don't%20open/comm.png" width="220" height="65" width="100">
 </a>
 </div>
-
-
-[Bug reports][bugs]
-
-[bugs]: https://github.com/drknvpn/privacy-toolkit-x/issues
-
 
 📜 License:
 
