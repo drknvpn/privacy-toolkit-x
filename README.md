@@ -16,7 +16,7 @@
 
 📚 Документация:
 
-[Документация в удобном «HTML» виде][docs]
+[Установка, зависимости и т.д][docs]
 
 [docs]: https://drknvpn.github.io/privacy-toolkit-x/
 
