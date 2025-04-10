@@ -25,7 +25,8 @@
 
 
 
-*New update dated April 10, 2025*
+*New update dated April 10, 2025.
+The update has been improved:*
 
 ### Architectural Improvements
 
