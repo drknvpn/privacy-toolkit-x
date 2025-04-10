@@ -25,8 +25,11 @@
 
 
 
-*New update dated April 10, 2025.
-The update has been improved:*
+The plan is to modernize the Privacy Toolkit X³ site with a more professional, responsive design while keeping the theme currently in use. I will be using Next.js and Tailwind CSS to create a more attractive look and feel with improved typography, animations, and usability.
+
+In the meantime, I want to share a fresh update to the Privacy Toolkit X³ software code dated April 10, 2025. 
+
+The update contains improvements such as:
 
 ### Architectural Improvements
 
