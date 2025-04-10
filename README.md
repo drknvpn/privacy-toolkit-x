@@ -56,7 +56,7 @@ The update has been improved:*
 3. **Stallable Monitoring**: Added mechanisms to stop background threads correctly.
 
 
-## 3. Additional features
+## Additional features
 
 1. **VPN Connection Monitoring**: Automatically detects a VPN break and activates protective measures.
 2. **Advanced metadata cleanup**: Supports more file formats.
