@@ -67,3 +67,11 @@ The update contains improvements such as:
 
 
 These enhancements will make Privacy Toolkit X³ more robust, secure, and user-friendly, while retaining all of its core features.
+
+
+
+
+## The new update dated 5/26/2025 includes:
+
+1. Minor edits to the instruction page
+2. Adding instructions for installing one of the servers, such as Prosody and Ejabberd, for further communication and real-time messaging.
