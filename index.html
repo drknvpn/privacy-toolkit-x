@@ -168,6 +168,14 @@
             padding: 2px 4px;
             border-radius: 3px;
         }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -531,29 +539,519 @@ cs.run_full_sweep()
                 </ul>
             </div>
         </section>
-    </div>
 
-    <footer>
-        <div class="container">
-            <p>Privacy Toolkit X³ | Ultimate Security Suite</p>
-            <p>For authorized security testing and privacy enhancement only</p>
-            <p>Version 7.2 | Last Updated: April 2025</p>
-        </div>
-    </footer>
+        <section id="xmpp-guide">
+            <div class="card">
+                <h2>XMPP Server Guide</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card" onclick="showTab('xmpp-info')" style="cursor: pointer;">
+                        <h3>ℹ️ XMPP Overview</h3>
+                        <p>Prosody vs Ejabberd comparison</p>
+                    </div>
+                    <div class="feature-card" onclick="showTab('prosody-script')" style="cursor: pointer;">
+                        <h3>⚙️ Prosody Auto-Installer</h3>
+                        <p>Automatic setup script</p>
+                    </div>
+                    <div class="feature-card" onclick="showTab('ejabberd-script')" style="cursor: pointer;">
+                        <h3>⚙️ Ejabberd Auto-Installer</h3>
+                        <p>Automatic setup script</p>
+                    </div>
+                    <div class="feature-card" onclick="showTab('xmpp-clients')" style="cursor: pointer;">
+                        <h3>📱 XMPP Clients</h3>
+                        <p>Client apps for all platforms</p>
+                    </div>
+                </div>
 
-    <script>
-        function copyCode(elementId) {
-            const codeElement = document.getElementById(elementId);
-            const textToCopy = codeElement.textContent;
-            
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                const btn = event.target;
-                btn.textContent = "Copied!";
-                setTimeout(() => {
-                    btn.textContent = "Copy";
-                }, 2000);
-            });
-        }
-    </script>
-</body>
-</html>
+                <!-- XMPP Info Tab -->
+                <div id="xmpp-info" class="tab-content" style="display: block;">
+                    <h3>Prosody vs Ejabberd: Choosing Your XMPP Server</h3>
+                    
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Prosody</th>
+                            <th>Ejabberd</th>
+                        </tr>
+                        <tr>
+                            <td>Complexity</td>
+                            <td>Simple, lightweight</td>
+                            <td>More complex, feature-rich</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>Good for small-medium deployments</td>
+                            <td>Excellent for large-scale deployments</td>
+                        </tr>
+                        <tr>
+                            <td>Configuration</td>
+                            <td>Simple Lua config files</td>
+                            <td>YAML/Erlang configuration</td>
+                        </tr>
+                        <tr>
+                            <td>Modules</td>
+                            <td>Good selection of modules</td>
+                            <td>Very extensive module ecosystem</td>
+                        </tr>
+                        <tr>
+                            <td>Best For</td>
+                            <td>Personal use, small teams</td>
+                            <td>Large organizations, enterprises</td>
+                        </tr>
+                    </table>
+
+                    <h4>Security Considerations</h4>
+                    <ul>
+                        <li>Both support TLS encryption (recommended: TLS 1.3)</li>
+                        <li>Ejabberd has more advanced access control features</li>
+                        <li>Prosody is easier to audit due to simpler codebase</li>
+                        <li>Both support OMEMO encryption for end-to-end security</li>
+                    </ul>
+
+                    <div class="note">
+                        <strong>Recommendation:</strong> Start with Prosody if you're new to XMPP servers. Choose Ejabberd if you need enterprise features or expect high load.
+                    </div>
+                </div>
+
+                <!-- Prosody Auto-Installer Tab -->
+                <div id="prosody-script" class="tab-content" style="display: none;">
+                    <h3>Prosody Automatic Installation Script</h3>
+                    <pre id="prosody-script-code">
+#!/bin/bash
+# Privacy Toolkit X³ - Prosody Auto-Installer
+# Version 1.2 | Secure XMPP Server Setup
+
+# ----------------------------
+# CONFIGURATION
+# ----------------------------
+DOMAIN="yourdomain.com"           # Change to your domain
+ADMIN_USER="admin"                # Admin username
+ADMIN_PASSWORD=$(openssl rand -hex 16)  # Random secure password
+PROSODY_VERSION="0.12.1"          # Prosody version to install
+
+# ----------------------------
+# INSTALLATION
+# ----------------------------
+echo "[+] Installing dependencies..."
+sudo apt update && sudo apt install -y \
+    lua5.2 liblua5.2-dev libssl-dev \
+    libidn11-dev luarocks git \
+    certbot
+
+echo "[+] Installing Prosody..."
+wget https://prosody.im/downloads/source/prosody-$PROSODY_VERSION.tar.gz
+tar xzf prosody-$PROSODY_VERSION.tar.gz
+cd prosody-$PROSODY_VERSION
+./configure --prefix=/usr --sysconfdir=/etc --with-lua-include=/usr/include/lua5.2
+make
+sudo make install
+
+# ----------------------------
+# CONFIGURATION
+# ----------------------------
+echo "[+] Generating certificates..."
+sudo certbot certonly --standalone --agree-tos --non-interactive -d $DOMAIN
+
+echo "[+] Creating secure configuration..."
+sudo bash -c "cat > /etc/prosody/prosody.cfg.lua << EOF
+-- Privacy Toolkit X³ Secure Prosody Config
+daemonize = true
+pidfile = \"/var/run/prosody/prosody.pid\"
+
+modules_enabled = {
+    \"roster\"; \"saslauth\"; \"tls\"; \"dialback\"; \"disco\";
+    \"carbons\"; \"pep\"; \"private\"; \"blocklist\"; \"vcard4\";
+    \"vcard_legacy\"; \"version\"; \"uptime\"; \"time\"; \"ping\";
+    \"register\"; \"admin_adhoc\"; \"mam\"; \"csi\"; \"smacks\";
+    \"http_files\"; \"omemo_all_access\";
+}
+
+modules_disabled = {
+    \"offline\"; -- Disable offline storage for better privacy
+}
+
+-- TLS Configuration
+ssl = {
+    key = \"/etc/letsencrypt/live/$DOMAIN/privkey.pem\";
+    certificate = \"/etc/letsencrypt/live/$DOMAIN/fullchain.pem\";
+    protocol = \"tlsv1.3+\";
+    ciphers = \"HIGH:!aNULL:!MD5:!3DES\";
+    dhparam = \"/etc/prosody/certs/dh-2048.pem\";
+}
+
+-- Authentication
+authentication = \"internal_hashed\"
+allow_registration = false -- Disable open registration
+
+-- Logging
+log = {
+    {levels = {min = \"warn\"}, to = \"console\"};
+    {levels = {min = \"error\"}, to = \"file\", filename = \"/var/log/prosody/prosody.err\"};
+}
+
+-- VirtualHost
+VirtualHost \"$DOMAIN\"
+    admins = { \"$ADMIN_USER@$DOMAIN\" }
+    modules_enabled = { \"mam\" } -- Enable message archiving
+EOF"
+
+echo "[+] Creating admin user..."
+sudo prosodyctl register $ADMIN_USER $DOMAIN $ADMIN_PASSWORD
+
+echo "[+] Generating DH parameters (this may take a while)..."
+sudo openssl dhparam -out /etc/prosody/certs/dh-2048.pem 2048
+
+echo "[+] Starting Prosody..."
+sudo systemctl enable prosody
+sudo systemctl start prosody
+
+# ----------------------------
+# FIREWALL CONFIGURATION
+# ----------------------------
+echo "[+] Configuring firewall..."
+sudo ufw allow 5222/tcp  # XMPP client connections
+sudo ufw allow 5269/tcp  # Server-to-server
+sudo ufw allow 5280/tcp  # BOSH/WebSocket
+sudo ufw allow 5347/tcp  # XMPP over TLS (XEP-0368)
+
+echo "[+] Installation complete!"
+echo "----------------------------------------"
+echo "Admin credentials:"
+echo "Username: $ADMIN_USER@$DOMAIN"
+echo "Password: $ADMIN_PASSWORD"
+echo "----------------------------------------"
+echo "Recommended next steps:"
+echo "1. Configure DNS records (A/AAAA and SRV)"
+echo "2. Set up backup for certificates and config"
+echo "3. Consider enabling OMEMO for E2EE"
+                    </pre>
+                    <button class="copy-btn" onclick="copyCode('prosody-script-code')">Copy</button>
+
+                    <h4>Script Features</h4>
+                    <ul>
+                        <li><strong>Automatic Installation:</strong> Handles all dependencies and compilation</li>
+                        <li><strong>Secure Configuration:</strong> Enforces TLS 1.3 and strong ciphers</li>
+                        <li><strong>Let's Encrypt Integration:</strong> Automatic certificate setup</li>
+                        <li><strong>Admin User Creation:</strong> Generates secure random password</li>
+                        <li><strong>Firewall Configuration:</strong> Opens only necessary ports</li>
+                    </ul>
+                </div>
+
+                <!-- Ejabberd Auto-Installer Tab -->
+                <div id="ejabberd-script" class="tab-content" style="display: none;">
+                    <h3>Ejabberd Automatic Installation Script</h3>
+                    <pre id="ejabberd-script-code">
+#!/bin/bash
+# Privacy Toolkit X³ - Ejabberd Auto-Installer
+# Version 1.3 | Enterprise XMPP Server Setup
+
+# ----------------------------
+# CONFIGURATION
+# ----------------------------
+DOMAIN="yourdomain.com"           # Change to your domain
+ADMIN_USER="admin"                # Admin username
+ADMIN_PASSWORD=$(openssl rand -hex 16)  # Random secure password
+EJABBERD_VERSION="22.05"          # Ejabberd version to install
+
+# ----------------------------
+# INSTALLATION
+# ----------------------------
+echo "[+] Installing dependencies..."
+sudo apt update && sudo apt install -y \
+    build-essential libexpat1-dev \
+    libyaml-dev libssl-dev zlib1g-dev \
+    libpam0g-dev libsqlite3-dev \
+    libgd-dev libwebp-dev
+
+echo "[+] Installing Erlang..."
+wget https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_25.3.2.3-1~ubuntu~jammy_amd64.deb
+sudo dpkg -i esl-erlang_*.deb
+sudo apt-get install -f -y
+
+echo "[+] Installing Ejabberd..."
+wget https://www.process-one.net/downloads/ejabberd/$EJABBERD_VERSION/ejabberd-$EJABBERD_VERSION-linux-x86_64.run
+chmod +x ejabberd-$EJABBERD_VERSION-linux-x86_64.run
+sudo ./ejabberd-$EJABBERD_VERSION-linux-x86_64.run
+
+# ----------------------------
+# CONFIGURATION
+# ----------------------------
+echo "[+] Generating certificates..."
+sudo certbot certonly --standalone --agree-tos --non-interactive -d $DOMAIN
+
+echo "[+] Creating secure configuration..."
+sudo bash -c "cat > /etc/ejabberd/ejabberd.yml << EOF
+# Privacy Toolkit X³ Secure Ejabberd Config
+hosts:
+  - \"$DOMAIN\"
+
+loglevel: warning
+log_rotate_size: 10485760
+log_rotate_count: 1
+
+certfiles:
+  - \"/etc/letsencrypt/live/$DOMAIN/fullchain.pem\"
+  - \"/etc/letsencrypt/live/$DOMAIN/privkey.pem\"
+
+tls_protocol_options:
+  - \"no_sslv3\"
+  - \"no_tlsv1\"
+  - \"no_tlsv1_1\"
+  - \"no_tlsv1_2\"
+  - \"cipher_server_preference\"
+  - \"no_compression\"
+
+c2s_ciphers: \"HIGH:!aNULL:!MD5:!3DES\"
+s2s_ciphers: \"HIGH:!aNULL:!MD5:!3DES\"
+
+listen:
+  -
+    port: 5222
+    module: ejabberd_c2s
+    tls: true
+    max_stanza_size: 65536
+    shaper: c2s_shaper
+    access: c2s
+  -
+    port: 5269
+    module: ejabberd_s2s_in
+    tls: true
+    max_stanza_size: 131072
+  -
+    port: 5280
+    module: ejabberd_http
+    tls: true
+    request_handlers:
+      \"/admin\": ejabberd_web_admin
+      \"/api\": mod_http_api
+      \"/bosh\": mod_bosh
+      \"/ws\": mod_websockets
+      \"/.well-known/acme-challenge\": ejabberd_acme
+
+acl:
+  admin:
+    user: \"$ADMIN_USER@$DOMAIN\"
+
+access_rules:
+  local:
+    allow: local
+  c2s:
+    deny: blocked
+    allow: all
+  announce:
+    allow: admin
+  configure:
+    allow: admin
+  muc_create:
+    allow: local
+  pubsub_createnode:
+    allow: local
+  trusted_network:
+    allow: loopback
+
+modules:
+  mod_adhoc: {}
+  mod_admin_extra: {}
+  mod_avatar: {}
+  mod_blocking: {}
+  mod_bosh: {}
+  mod_caps: {}
+  mod_carboncopy: {}
+  mod_client_state: {}
+  mod_disco: {}
+  mod_http_api: {}
+  mod_last: {}
+  mod_mam:
+    assume_mam_usage: true
+    default: always
+  mod_muc:
+    host: \"conference.$DOMAIN\"
+    access: all
+    access_admin: admin
+    access_create: all
+    access_persistent: all
+    default_room_options:
+      mam: true
+  mod_muc_admin: {}
+  mod_offline:
+    access_max_user_messages: max_user_offline_messages
+  mod_ping: {}
+  mod_privacy: {}
+  mod_private: {}
+  mod_pubsub:
+    access_createnode: pubsub_createnode
+    plugins:
+      - \"flat\"
+      - \"pep\"
+    force_node_config:
+      \"eu.siacs.conversations.axolotl.*\":
+        access_model: open
+  mod_push: {}
+  mod_push_keepalive: {}
+  mod_register:
+    ip_access: trusted_network
+    welcome_message:
+      subject: \"Welcome to $DOMAIN XMPP server\"
+      body: |-
+        Hi,
+        Welcome to your new account on $DOMAIN.
+    access: register
+  mod_roster: {}
+  mod_s2s_dialback: {}
+  mod_shared_roster: {}
+  mod_stream_mgmt: {}
+  mod_vcard: {}
+  mod_vcard_xupdate: {}
+  mod_version: {}
+  mod_websockets: {}
+
+shaper:
+  normal: 1000
+  fast: 50000
+
+shaper_rules:
+  max_user_sessions: 10
+  max_user_offline_messages: 5000
+  c2s_shaper:
+    none: admin
+    normal: all
+  s2s_shaper: fast
+EOF"
+
+echo "[+] Creating admin user..."
+sudo ejabberdctl register $ADMIN_USER $DOMAIN $ADMIN_PASSWORD
+
+echo "[+] Starting Ejabberd..."
+sudo systemctl enable ejabberd
+sudo systemctl start ejabberd
+
+# ----------------------------
+# FIREWALL CONFIGURATION
+# ----------------------------
+echo "[+] Configuring firewall..."
+sudo ufw allow 5222/tcp  # XMPP client connections
+sudo ufw allow 5269/tcp  # Server-to-server
+sudo ufw allow 5280/tcp  # BOSH/WebSocket
+sudo ufw allow 5443/tcp  # Admin interface
+
+echo "[+] Installation complete!"
+echo "----------------------------------------"
+echo "Admin credentials:"
+echo "Username: $ADMIN_USER@$DOMAIN"
+echo "Password: $ADMIN_PASSWORD"
+echo "----------------------------------------"
+echo "Web Admin: https://$DOMAIN:5280/admin/"
+echo "----------------------------------------"
+echo "Recommended next steps:"
+echo "1. Configure DNS records (A/AAAA and SRV)"
+echo "2. Set up database backend (PostgreSQL recommended)"
+echo "3. Configure backup strategy"
+                    </pre>
+                    <button class="copy-btn" onclick="copyCode('ejabberd-script-code')">Copy</button>
+
+                    <h4>Script Features</h4>
+                    <ul>
+                        <li><strong>Enterprise-Grade Setup:</strong> Configures Ejabberd for production use</li>
+                        <li><strong>TLS 1.3 Enforcement:</strong> Highest security standards</li>
+                        <li><strong>Module Configuration:</strong> Pre-configured with recommended modules</li>
+                        <li><strong>Admin Interface:</strong> Secure web admin setup</li>
+                        <li><strong>MAM Support:</strong> Message Archive Management configured</li>
+                    </ul>
+                </div>
+
+                                <!-- XMPP Clients Tab -->
+                                <div id="xmpp-clients" class="tab-content" style="display: none;">
+                                    <h3>XMPP Clients for All Platforms</h3>
+                                    
+                                    <h4>Windows</h4>
+                                    <div class="feature-card">
+                                        <h5>Gajim</h5>
+                                        <p><strong>Pros:</strong> OMEMO support, plugin ecosystem</p>
+                                        <p><strong>Cons:</strong> UI somewhat dated</p>
+                                        <p><strong>Install:</strong> <a href="https://gajim.org/download/" class="github-link">Download installer</a></p>
+                                    </div>
+                
+                                    <h4>Linux</h4>
+                                    <div class="feature-card">
+                                        <h5>Dino</h5>
+                                        <p><strong>Pros:</strong> Modern UI, native GTK app</p>
+                                        <p><strong>Cons:</strong> Less feature-rich than others</p>
+                                        <p><strong>Install:</strong> <code>sudo apt install dino-im</code></p>
+                                    </div>
+                
+                                    <h4>macOS</h4>
+                                    <div class="feature-card">
+                                        <h5>Monal</h5>
+                                        <p><strong>Pros:</strong> Native macOS feel, push notifications</p>
+                                        <p><strong>Cons:</strong> Some advanced features missing</p>
+                                        <p><strong>Install:</strong> <code>brew install --cask monal</code></p>
+                                    </div>
+                
+                                    <h4>Android</h4>
+                                    <div class="feature-card">
+                                        <h5>Conversations</h5>
+                                        <p><strong>Pros:</strong> Best OMEMO support, clean UI</p>
+                                        <p><strong>Cons:</strong> Paid app (worth it)</p>
+                                        <p><strong>Install:</strong> <a href="https://play.google.com/store/apps/details?id=eu.siacs.conversations" class="github-link">Google Play</a></p>
+                                    </div>
+                
+                                    <h4>iOS</h4>
+                                    <div class="feature-card">
+                                        <h5>Siskin IM</h5>
+                                        <p><strong>Pros:</strong> Feature-rich, push support</p>
+                                        <p><strong>Cons:</strong> Subscription model</p>
+                                        <p><strong>Install:</strong> <a href="https://apps.apple.com/us/app/siskin-im-xmpp-client/id1448129638" class="github-link">App Store</a></p>
+                                    </div>
+                
+                                    <h4>Cross-Platform</h4>
+                                    <div class="feature-card">
+                                        <h5>Pidgin (with OMEMO plugin)</h5>
+                                        <p><strong>Pros:</strong> Works everywhere, plugin support</p>
+                                        <p><strong>Cons:</strong> UI outdated, requires plugin for E2EE</p>
+                                        <p><strong>Install:</strong> <code>sudo apt install pidgin pidgin-omemo</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <footer>
+                        <div class="container">
+                            <p>Privacy Toolkit X³ | Ultimate Security Suite</p>
+                            <p>For authorized security testing and privacy enhancement only</p>
+                            <p>Version 7.2 | Last Updated: April 2025</p>
+                        </div>
+                    </footer>
+                
+                    <script>
+                        function copyCode(elementId) {
+                            const codeElement = document.getElementById(elementId);
+                            const textToCopy = codeElement.textContent;
+                            
+                            navigator.clipboard.writeText(textToCopy).then(() => {
+                                const btn = event.target;
+                                btn.textContent = "Copied!";
+                                setTimeout(() => {
+                                    btn.textContent = "Copy";
+                                }, 2000);
+                            });
+                        }
+                
+                        // Tab switching functionality
+                        function showTab(tabId) {
+                            // Hide all tab contents
+                            document.querySelectorAll('.tab-content').forEach(tab => {
+                                tab.style.display = 'none';
+                            });
+                            
+                            // Show selected tab
+                            document.getElementById(tabId).style.display = 'block';
+                        }
+                
+                        // Initialize first tab as active
+                        document.addEventListener('DOMContentLoaded', function() {
+                            showTab('xmpp-info');
+                        });
+                    </script>
+                </body>
+                </html>
